@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-functions/dotnet:3.0
+FROM mcr.microsoft.com/azure-functions/dotnet:latest
 
 RUN mkdir -p /home/site/wwwroot
 VOLUME /home/site/wwwroot

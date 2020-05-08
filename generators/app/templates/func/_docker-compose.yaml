@@ -1,6 +1,6 @@
 version: '3.5'
 services:
-  smartlinks:
+  <%= appName %>:
     volumes:
       - ./bin/Debug/netcoreapp3.1:/home/site/wwwroot
     build: .

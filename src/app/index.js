@@ -97,6 +97,7 @@ export default class MyGenerator extends Generator {
         this.destinationRoot(this.appName);
         this.sourceRoot(path.join(__dirname, "/templates/func"));
         this.render("_docker-compose.yaml", "docker-compose.yaml", { appName: this.appName });
+		this.render("_gulpfile.babel.js", "gulpfile.babel.js", { appName: this.appName });
         this.render("_package.json", "package.json", {
             appName: this.appName,
             appDesc: this.appDesc
@@ -104,7 +105,6 @@ export default class MyGenerator extends Generator {
         this.copy(".babelrc", ".babelrc", false);
         this.copy(".gitignore", ".gitignore", false);
         this.copy("Dockerfile", "Dockerfile", false);
-        this.copy("gulpfile.babel.js", "gulpfile.babel.js", false);
         this.copy("host.json", "host.json", false);
         this.copy("local.settings.json.sample", "local.settings.json.sample", false);
         this.copy("Main.csproj", "Main.csproj", false);

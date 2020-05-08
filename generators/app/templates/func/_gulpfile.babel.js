@@ -48,7 +48,7 @@ gulp.task("publish", gulp.series("publish:build", "postpublish"));
 
 // ** Run ** /
 gulp.task("run-build", (done) => {
-    var cmd = spawn("docker-compose", ["run", "-p", "8080:80", "smartlinks"], {stdio: 'inherit'});
+    var cmd = spawn("docker-compose", ["run", "-p", "8080:80", "<%= appName %>"], {stdio: 'inherit'});
     cmd.on("close", (code) => {
         done(code);
     });
