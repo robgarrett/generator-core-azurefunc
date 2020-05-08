@@ -26,7 +26,7 @@ gulp.task("compile", () => {
 });
 
 gulp.task("dockerize", (done) => {
-    var cmd = spawn("docker-compose", ["build"], {stdio: 'inherit'});
+    var cmd = spawn("docker-compose", ["build", "<%= appName %>-dev"], { stdio: 'inherit' });
     cmd.on("close", (code) => {
         done(code);
     });
@@ -48,7 +48,7 @@ gulp.task("publish", gulp.series("publish:build", "postpublish"));
 
 // ** Run ** /
 gulp.task("run-build", (done) => {
-    var cmd = spawn("docker-compose", ["run", "-p", "8080:80", "<%= appName %>"], {stdio: 'inherit'});
+    var cmd = spawn("docker-compose", ["run", "--service-ports", "<%= appName %>-dev"], { stdio: 'inherit' });
     cmd.on("close", (code) => {
         done(code);
     });

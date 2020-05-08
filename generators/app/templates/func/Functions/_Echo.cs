@@ -10,7 +10,7 @@ namespace <%= namespace %>
     public class EchoFunc
     {
         [FunctionName("Echo")]
-        public async Task<IActionResult> GetLinks([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "echo")] HttpRequest req, ILogger log)
+        public async Task<IActionResult> Echo([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "echo")] HttpRequest req, ILogger log)
         {
             return await Task<IActionResult>.Run(() =>
             {
