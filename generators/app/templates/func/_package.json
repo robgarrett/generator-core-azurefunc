@@ -1,0 +1,21 @@
+{
+    "name": "<%= appName %>",
+    "version": "1.0.0",
+    "description": "<%= appDesc %>",
+    "author": "Rob Garrett.",
+    "private": true,
+    "devDependencies": {
+        "@babel/core": "^7.9.6",
+        "@types/gulp-babel": "^6.1.29",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.2",
+        "babel-preset-env": "^1.7.0",
+        "child_process": "^1.0.2",
+        "eslint": "^6.8.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-dotnet-cli": "^1.1.0",
+        "gulp-util": "^3.0.8"
+    }
+}

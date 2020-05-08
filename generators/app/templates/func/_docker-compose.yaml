@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  smartlinks:
+    volumes:
+      - ./bin/Debug/netcoreapp3.1:/home/site/wwwroot
+    build: .
+    image: <%= appName %>:v1
+    container_name: <%= appName %>
+    restart: always
