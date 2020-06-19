@@ -104,9 +104,11 @@ export default class MyGenerator extends Generator {
         });
         this.copy(".babelrc", ".babelrc", false);
         this.copy(".gitignore", ".gitignore", false);
-        this.copy("Dockerfile", "Dockerfile", false);
+        this.copy("Dockerfile.dev", "Dockerfile.dev", false);
+        this.copy("Dockerfile.prod", "Dockerfile.prod", false);
         this.copy("host.json", "host.json", false);
-        this.copy("local.settings.json.sample", "local.settings.json.sample", false);
+        this.copy("local.settings.json", "local.settings.json.sample", false);
+        this.copy("local.settings.json", "local.settings.json", false);
         this.copy("Main.csproj", "Main.csproj", false);
         this.copy(".vscode/", ".vscode/", false);
         shell.mkdir(this.appName + "/Functions");

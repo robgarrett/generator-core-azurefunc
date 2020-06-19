@@ -28,6 +28,7 @@ gulp.task("lint", () => gulp.src([
     paths.scripts.src,
     "!node_modules/**"
 ]).pipe(eslint()).
+    pipe(eslint({fix:true})).
     pipe(eslint.format()).
     pipe(eslint.failAfterError()));
 
