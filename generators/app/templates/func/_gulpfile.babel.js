@@ -41,8 +41,7 @@ gulp.task("publish:build", () => {
     return gulp.src("**/*.csproj", { read: false }).pipe(publish({ configuration: "Release" }));
 });
 gulp.task("postpublish", (done) => {
-    return gulp.src(["./appSettings.json"])
-        .pipe(gulp.dest("./bin/Release/netcoreapp3.1/publish/"));
+    return done();
 });
 gulp.task("publish", gulp.series("publish:build", "postpublish"));
 
